@@ -1,0 +1,108 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+
+.unscrol {
+  overflow: hidden;
+}
+
+.open-menu .sitenav__links {
+  display: block;
+}
+
+.open-menu .site-header__menu-img {
+  background-image: url("../../images/main-none.png");
+}
+
+.site-header__inner {
+  @include mix.main-flex;
+  margin-block: 32px;
+}
+
+.logo {
+  width: 163px;
+}
+
+.site-header__menu-img {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  right: 24px;
+  z-index: 100;
+  background-image: url("../../images/main-menu.png");
+  @include mix.background;
+  background-color: transparent;
+  border: none;
+}
+
+.sitenav__links {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  list-style: none;
+  text-align: center;
+  font-family: var.$fonts-fraunces;
+  @include mix.margintopadding;
+  background-image: linear-gradient(
+    360deg,
+    rgba(254, 252, 247, 0.504981) 0%,
+    #fefcf7 55.94%
+  );
+  padding-top: 40px;
+  margin-top: 40px;
+  display: none;
+}
+
+.sitenav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.sitenav__link {
+  text-decoration: none;
+  color: var.$main-three-text-color;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 32px;
+  transition: all 0.4s ease;
+  &:hover {
+    cursor: pointer;
+    color: var.$main-three-text-color;
+  }
+}
+@media only screen and (min-width: 650px) {
+  .container {
+    padding-inline: 20px;
+  }
+  .site-header__menu-img {
+    display: none;
+  }
+  .logo {
+    width: 236px;
+  }
+  .site-header__inner {
+    margin-top: 40px;
+    margin-bottom: 53px;
+  }
+  .sitenav__links {
+    position: static;
+    display: flex;
+    column-gap: 33px;
+    @include mix.margintopadding;
+    height: 15px;
+  }
+  .sitenav__link {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.92px;
+    color: var.$main-one-text-color;
+    text-transform: uppercase;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .site-header__inner {
+    margin-block: 43px;
+  }
+}

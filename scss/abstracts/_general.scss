@@ -1,0 +1,23 @@
+@use "./variables" as var;
+@use "../abstracts/mixins" as mix;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var.$fonts-barlow;
+  background-color: var.$main-bg-color;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  @include mix.margintopadding;
+}

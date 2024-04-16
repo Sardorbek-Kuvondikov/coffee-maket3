@@ -1,0 +1,18 @@
+@mixin main-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+@mixin background {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+@mixin margintopadding {
+  margin: 0;
+  padding: 0;
+}
