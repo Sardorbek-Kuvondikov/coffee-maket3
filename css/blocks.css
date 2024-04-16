@@ -295,6 +295,10 @@
   display: none;
   list-style: none;
   font-family: "Fraunces";
+  margin: 0;
+}
+.data-manu__item {
+  margin-top: 24px;
 }
 .data-manu__links {
   font-size: 24px;
@@ -316,8 +320,17 @@
   margin-right: 38px;
 }
 
+.first-item {
+  margin-top: 0;
+}
+
 .data-manu :not(:last-child) {
-  margin-bottom: 49px;
+  border-bottom: 1px solid #dfdfdd;
+  padding-bottom: 24px;
+  transition: ease-out 0.4s;
+}
+.data-manu :not(:last-child):hover {
+  border-color: #0e8784;
 }
 
 .result {

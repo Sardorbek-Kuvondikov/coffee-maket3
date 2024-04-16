@@ -205,9 +205,13 @@
 // LEFT DATA MENU
 .data-manu {
   display: none;
-  // padding: 10;
   list-style: none;
   font-family: var.$fonts-fraunces;
+  margin: 0;
+
+  &__item {
+    margin-top: 24px;
+  }
 
   &__links {
     font-size: 24px;
@@ -231,8 +235,17 @@
   }
 }
 
+.first-item {
+  margin-top: 0;
+}
+
 .data-manu :not(:last-child) {
-  margin-bottom: 49px;
+  border-bottom: 1px solid #dfdfdd;
+  padding-bottom: 24px;
+  transition: ease-out 0.4s;
+  &:hover {
+    border-color: var.$main-bg-text-color;
+  }
 }
 
 // RESULT
