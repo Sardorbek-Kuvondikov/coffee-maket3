@@ -75,10 +75,6 @@ elToggleForm.addEventListener("submit", (evt) => {
   arr.push(newArr);
   console.log(arr);
 
-  // arr.forEach((item) => {
-  //   // elToggleResult.textContent = `“I drink my coffee as ${item[0]}, with a ${item[1]} type of bean. ${item[3]} groundala ${item[4]}, sent to me ${item[5]}.”`;
-  // });
-
   arr.forEach((item) => {
     elToggleResult.innerHTML = `
       <p>
